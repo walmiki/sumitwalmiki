@@ -28,6 +28,25 @@ function NavItem({ href, text }) {
   );
 }
 
+function DownloadResume() {
+  return (
+    <div className="hidden md:inline-block p-1 sm:px-3 sm:py-2 rounded-lg transition-all">
+      <div
+        className={cn(
+          'transform hover:scale-[1.05] transition-all',
+          'rounded-lg bg-gradient-to-r p-1',
+          'from-[#6EE7B7] via-[#3B82F6] to-[#9333EA]',
+          'cursor-pointer'
+        )}
+      >
+        <div className="bg-white dark:bg-gray-900 rounded-md py-1 px-3 font-medium">
+          <div className="">Resume</div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
 export default function Container(props) {
   const [mounted, setMounted] = useState(false);
   const { resolvedTheme, setTheme } = useTheme();
@@ -76,6 +95,7 @@ export default function Container(props) {
             <NavItem href="/work" text="Work" />
             <NavItem href="/projects" text="Projects" />
             <NavItem href="/contact" text="Contact" />
+            <DownloadResume />
           </div>
           <button
             aria-label="Toggle Dark Mode"

@@ -105,6 +105,12 @@ export default function MobileMenu() {
               <a className="flex w-auto pb-4">Tweets</a>
             </Link>
           </li>
+          <li
+            className="border-b border-gray-300 dark:border-gray-700 text-gray-900 dark:text-gray-100 text-sm font-semibold cursor-pointer"
+            style={{ transitionDelay: '325ms' }}
+          >
+            <div className="flex w-auto pb-4">Download Resume</div>
+          </li>
         </ul>
       )}
     </>
